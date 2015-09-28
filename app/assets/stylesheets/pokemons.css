@@ -1,0 +1,14 @@
+body {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("http://cdn.bulbagarden.net/upload/d/d4/FRLG_Kanto.png");
+  background: -moz-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("http://cdn.bulbagarden.net/upload/d/d4/FRLG_Kanto.png");
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("http://cdn.bulbagarden.net/upload/d/d4/FRLG_Kanto.png");
+  background-repeat: no-repeat;
+  background-size: 1200px 600px;
+}
+
+.pokedex-title {
+  font-family: 'Pokemon Hollow';
+  font-size: 40px;
+  color: #FFFFFF;
+  text-align: center;
+}
