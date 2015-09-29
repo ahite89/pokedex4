@@ -3,6 +3,10 @@ class Pokemon < ActiveRecord::Base
   def self.save_data_from_api
    response = HTTParty.get("http://pokeapi.co/api/v1/pokedex/1/")
    pokemon = response["pokemon"]
-   name = pokemon.each { |row| row["name"] }
+   pokemon_parsed = JSON.parse(pokemon.to_json)
+
+   name = pokemon_parsed.each { |row| row["name"] }
  end
+
+ validates :name, presence: true
 end
