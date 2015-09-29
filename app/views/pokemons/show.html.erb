@@ -1,0 +1,8 @@
+<body>
+  <div id="pokemon-name">
+    <%= @pokemon.name.tr('[]', '').gsub(/[""]/, '').capitalize %>
+  </div>
+  <div id="sprite">
+    <%= image_tag("http://img.pokemondb.net/sprites/black-white/normal/" +  @pokemon.name.tr('[]', '').gsub(/[""]/, '') + ".png", :class => "single-sprite") %>
+  </div>
+</body>
