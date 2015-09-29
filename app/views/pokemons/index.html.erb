@@ -3,6 +3,8 @@
     <p id="title">The Original Pokedex</p>
   </div>
   <div id="sprites">
-    <%= link_to image_tag("http://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif") %>
+    <% @pokemons.each do |pokemon| %>
+      <%= image_tag("http://img.pokemondb.net/sprites/black-white/normal/" + <%= pokemon.name.tr('[]', '').gsub(/[""]/, '') %> + ".png") %>
+    <% end %>
   </div>
 </body>
