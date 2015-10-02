@@ -10,4 +10,5 @@ class Pokemon < ActiveRecord::Base
  end
 
  validates :name, presence: true
+ validates :number, presence: true
 end
