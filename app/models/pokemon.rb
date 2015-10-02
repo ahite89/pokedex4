@@ -6,7 +6,7 @@ class Pokemon < ActiveRecord::Base
    pokemon_parsed = JSON.parse(pokemon.to_json)
 
    name = pokemon_parsed.each { |row| row["name"] }
-   number = pokemon_parsed.each { |row| row[""] }
+   number = pokemon_parsed.each { |row| row["resource_uri"] }
  end
 
  validates :name, presence: true

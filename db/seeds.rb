@@ -4,5 +4,5 @@
 json = Pokemon.save_data_from_api
 pokemon_array = []
 json.each { |row| pokemon_array << [row["name"]] }
-json.each { |row| pokemon_array << [row[""]] }
+json.each { |row| pokemon_array << [row["resource_uri"]] }
 pokemon_array.each { |name| Pokemon.create(name: name, number: number) }
