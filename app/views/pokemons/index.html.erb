@@ -3,8 +3,8 @@
     <p id="title">The Original Pokedex</p>
   </div>
   <div id="sprites">
-    <% if @pokemon.number < 152 %>
-      <% @pokemons.each do |pokemon| %>
+    <% @pokemons.each do |pokemon| %>
+      <% if @pokemon.number < 152 %>
         <%= link_to image_tag("http://img.pokemondb.net/sprites/black-white/normal/" +  pokemon.name.tr('[]', '').gsub(/[""]/, '') + ".png"), pokemon_path(pokemon) %>
       <% end %>
     <% end %>
