@@ -7,6 +7,14 @@ class Pokemon < ActiveRecord::Base
 
    name = pokemon_parsed.each { |row| row["name"] }
    number = pokemon_parsed.each { |row| row["resource_uri"].split("/").last.to_i }
+
+   ordered = {}
+   pokemon_parsed.each do |row|
+    number = row["resource_uri"].split("/").last.to_i
+      ordered[row["name"].capitalize] = number
+    end
+
+    ordered_pokemon = ordered.sort_by { |_k, v| v }
  end
 
  validates :name, presence: true
