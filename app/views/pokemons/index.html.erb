@@ -4,7 +4,7 @@
   </div>
   <div id="sprites">
     <% @pokemons.each do |pokemon| %>
-      <% if @pokemon.number < 152 %>
+      <% if pokemon.number < 152 %>
         <%= link_to image_tag("http://img.pokemondb.net/sprites/black-white/normal/" +  pokemon.name.tr('[]', '').gsub(/[""]/, '') + ".png"), pokemon_path(pokemon) %>
       <% end %>
     <% end %>
