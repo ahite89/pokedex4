@@ -26,11 +26,17 @@ class Pokemon < ActiveRecord::Base
    height = stats["height"]
    weight = stats["weight"]
 
-
-
-
  end
 
  validates :name, presence: true
  validates :number, presence: true
+ validates :hp, presence: true
+ validates :attack, presence: true
+ validates :defense, presence: true
+ validates :sp_atk, presence: true
+ validates :sp_def, presence: true
+ validates :speed, presence: true
+ validates :height, presence: true
+ validates :weight, presence: true
+
 end
