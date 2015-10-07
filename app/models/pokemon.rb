@@ -10,11 +10,23 @@ class Pokemon < ActiveRecord::Base
 
    ordered = {}
    pokemon_parsed.each do |row|
-    number = row["resource_uri"].split("/").last.to_i
+   number = row["resource_uri"].split("/").last.to_i
       ordered[row["name"].capitalize] = number
     end
 
-  stats_response = HTTParty.get("http://pokeapi.co/api/v1/pokemon/1/")
+   stats_response = HTTParty.get("http://pokeapi.co/api/v1/pokemon/1/")
+   stats = JSON.parse(stats_response.to_json)
+
+   hp = stats["hp"]
+   attack = stats["attack"]
+   defense = stats["defense"]
+   sp_atk = stats["sp_atk"]
+   sp_def = stats["sp_def"]
+   speed = stats["speed"]
+   height = stats["height"]
+   weight = stats["weight"]
+
+
 
 
  end
