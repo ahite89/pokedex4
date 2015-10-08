@@ -27,6 +27,7 @@ class Pokemon < ActiveRecord::Base
    weight = stats["weight"]
 
    description_response = HTTParty.get("http://pokeapi.co/api/v1/description/")
+   description = JSON.parse(description_response.to_json)
 
  end
 
