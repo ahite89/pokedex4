@@ -5,4 +5,37 @@
   <div id="sprite">
     <%= image_tag("http://img.pokemondb.net/sprites/black-white/anim/normal/" +  @pokemon.name.tr('[]', '').gsub(/[""]/, '') + ".gif", :class => "single-sprite") %>
   </div>
+
+  <div>
+    <%= @pokemon.hp %>
+  </div>
+
+  <div>
+    <%= @pokemon.attack %>
+  </div>
+
+  <div>
+    <%= @pokemon.defense %>
+  </div>
+
+  <div>
+    <%= @pokemon.sp_atk %>
+  </div>
+
+  <div>
+    <%= @pokemon.sp_def %>
+  </div>
+
+  <div>
+    <%= @pokemon.speed %>
+  </div>
+
+  <div>
+    <%= @pokemon.height %>
+  </div>
+
+  <div>
+    <%= @pokemon.weight %>
+  </div>
+
 </body>

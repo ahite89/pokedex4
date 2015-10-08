@@ -14,10 +14,10 @@ class Pokemon < ActiveRecord::Base
       ordered[row["name"].capitalize] = number
     end
 
-   stats_response = HTTParty.get("http://pokeapi.co/api/v1/pokemon/1/")
+   stats_response = HTTParty.get("http://pokeapi.co/api/v1/pokemon/")
    stats = JSON.parse(stats_response.to_json)
 
-   hp = stats["hp"]
+   hp = stats.each { |row| row["hp"] }
    attack = stats["attack"]
    defense = stats["defense"]
    sp_atk = stats["sp_atk"]
@@ -25,6 +25,8 @@ class Pokemon < ActiveRecord::Base
    speed = stats["speed"]
    height = stats["height"]
    weight = stats["weight"]
+
+   description_response = HTTParty.get("http://pokeapi.co/api/v1/description/")
 
  end
 
