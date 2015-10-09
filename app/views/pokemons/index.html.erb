@@ -1,13 +1,13 @@
 <body>
-  <div class="pokedex-title">
-    <p id="title">Pokedex 151</p>
+  <div id="pokedex-title">
+    <p class="title">Pokedex 151</p>
   </div>
 
   <div class="sprites">
     <% @pokemons.each do |pokemon| %>
       <% if pokemon.number < 152 %>
         <%= link_to image_tag("http://img.pokemondb.net/sprites/black-white/normal/" +  pokemon.name.tr('[]', '').gsub(/[""]/, '') + ".png"), pokemon_path(pokemon), :id => "sprite" %>
-        <div id="pokename"><%= pokemon.name %></div>
+        <!--<div id="pokename"><%= pokemon.name %></div> -->
       <% end %>
     <% end %>
   </div>
