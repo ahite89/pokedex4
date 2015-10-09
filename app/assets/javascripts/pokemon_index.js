@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#sprite img').hover(function() {
-        $('#popup').show();
+        $('#pokename').show();
     }, function() {
-        $('#popup').hide();
+        $('#pokename').hide();
     });
 });

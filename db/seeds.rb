@@ -7,4 +7,3 @@ json.each { |row| pokemon_array << [row["name"], row["resource_uri"].split("/").
 
 ordered_pokemon = pokemon_array.sort_by &:last
 ordered_pokemon.each { |name, number| Pokemon.create(name: name, number: number) }
-#Pokemon.create(hp: hp, attack: attack, defense: defense)
