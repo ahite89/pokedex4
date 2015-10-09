@@ -18,7 +18,9 @@ body {
   padding-right: 15px;
 }
 
-.bigger {
-  width: 100px;
-  height: 100px;
+#hoveringTooltip {
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  color: white;
 }
