@@ -7,15 +7,18 @@ body {
 
 .pokedex-title {
   font-family: 'Pokemon Hollow';
-  font-size: 30px;
+  font-size: 40px;
   color: #FFFFFF;
   text-align: center;
   display: inline-block;
-  border-top: 5px red solid;
-  border-bottom: 5px white solid;
+  border-top: 8px red solid;
+  border-bottom: 8px white solid;
   border-radius: 10em;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  box-shadow: 0px 2px 10px black;
 }
 
 #sprite {
