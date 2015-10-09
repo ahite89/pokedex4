@@ -5,8 +5,10 @@
   <div id="sprite">
     <%= image_tag("http://img.pokemondb.net/sprites/black-white/anim/normal/" +  @pokemon.name.tr('[]', '').gsub(/[""]/, '') + ".gif", :class => "single-sprite") %>
   </div>
-
-  <div id="back">
-    <%= link_to "Back", pokemons_path %>
-    </div>
 </body>
+
+<footer>
+  <div id="back">
+    <%= link_to "Return To Index", pokemons_path %>
+  </div>
+</footer>

@@ -13,3 +13,9 @@
   display: block;
   margin: 0 auto;
 }
+
+#back a {
+  color: white;
+  font-family: 'Titillium Web';
+  margin: 0 auto;
+}
