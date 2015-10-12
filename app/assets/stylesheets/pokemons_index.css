@@ -8,6 +8,7 @@ body {
 #pokedex-title {
   font-family: 'Pokemon Hollow';
   font-size: 40px;
+  font-weight: 700;
   color: black;
   text-align: center;
   display: inline-block;
