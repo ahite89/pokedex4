@@ -33,3 +33,7 @@ body {
     position: absolute;
     display: none;
 }
+
+#sprite {
+  box-shadow: 2px 6px 10px white;
+}

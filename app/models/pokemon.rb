@@ -8,10 +8,10 @@ class Pokemon < ActiveRecord::Base
    name = pokemon_parsed.each { |row| row["name"] }
    number = pokemon_parsed.each { |row| row["resource_uri"].split("/").last.to_i }
 
-   stats_response = HTTParty.get("http://pokeapi.co/api/v1/pokemon/#{number}")
+   stats_response = HTTParty.get("http://pokeapi.co/api/v1/pokemon/#{number}/")
    stats_parsed = JSON.parse(stats_response.to_json)
 
-   #hp = stats["hp"]
+   hp = stats_parsed["hp"]
    #attack = stats["attack"]
    #defense = stats["defense"]
    #sp_atk = stats["sp_atk"]
